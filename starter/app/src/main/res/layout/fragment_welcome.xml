@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragments.WelcomeFragment">
+
+    <!-- LinearLayout used as there are only three child elements that can sit one atop the other
+    with margins to space them. The LinearLayout has a gravity of center to center the text views
+    and button in the center of the display -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView style="@style/TextAppearance.AppCompat.Title"
+            android:id="@+id/welcomeHeaderTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/welcome_header"
+            android:textAlignment="center" />
+<!--            android:textSize="30sp" />-->
+
+        <TextView style="@style/TextAppearance.AppCompat.Body1"
+            android:id="@+id/welcomeContentTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/welcome_content"
+            android:textAlignment="center" />
+
+        <Button style="@style/Widget.AppCompat.Button.Colored"
+            android:id="@+id/instructionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:text="@string/button_instructions" />
+
+    </LinearLayout>
+
+</layout>

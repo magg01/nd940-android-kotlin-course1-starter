@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="49f84b29-fbde-46ad-843e-d1d6c3ab878e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/starter/app/src/main/java/com/udacity/shoestore/LoginFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/starter/app/src/main/java/com/udacity/shoestore/LoginFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/starter/app/src/main/java/com/udacity/shoestore/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/starter/app/src/main/java/com/udacity/shoestore/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/starter/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/starter/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/starter/app/src/main/res/layout/fragment_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/starter/app/src/main/res/layout/fragment_login.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1rebM8qwgdO5MqceYh5AJmNlbgr" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/starter" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="49f84b29-fbde-46ad-843e-d1d6c3ab878e" name="Default Changelist" comment="" />
+      <created>1619339451951</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1619339451951</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="539" y="273" key="FileChooserDialogImpl" timestamp="1619339462198">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="539" y="273" key="FileChooserDialogImpl/-1200.-571.1200.1880/0.0.1920.1160@0.0.1920.1160" timestamp="1619339462198" />
+  </component>
+</project>

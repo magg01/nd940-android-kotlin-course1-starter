@@ -4,9 +4,6 @@ import android.content.Context
 import android.os.Bundle
 import android.util.TypedValue
 import android.view.*
-import android.view.ViewGroup.LayoutParams.MATCH_PARENT
-import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
-import android.view.ViewGroup.MarginLayoutParams
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.cardview.widget.CardView
@@ -19,7 +16,6 @@ import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
 import com.udacity.shoestore.models.Shoe
 import com.udacity.shoestore.models.ShoeViewModel
-
 
 
 class ShoeListFragment : Fragment() {
@@ -103,34 +99,23 @@ class ShoeListFragment : Fragment() {
 
     //create and return a single empty card view set up for displaying one shoe item on the list
     private fun createShoeCardView(): CardView {
-        val layoutParams = MarginLayoutParams(
-            MATCH_PARENT,
-            WRAP_CONTENT,
+        val layoutParams = LinearLayout.LayoutParams(
+            LinearLayout.LayoutParams.MATCH_PARENT,
+            LinearLayout.LayoutParams.WRAP_CONTENT
         )
         //create a CardView
         val shoeCard = CardView(requireContext())
-        shoeCard.id = View.generateViewId()
-
-        //set the margins of the CardView
-        val margin = convertDpToPixels(8).toInt()
-        layoutParams.setMargins(margin, margin / 2, margin, margin / 2)
-
-        //set the corner radius of the CardView
-        shoeCard.radius = convertDpToPixels(4)
+        //set the padding for the card
         val paddingAmount = convertDpToPixels(8).toInt()
         shoeCard.setContentPadding(paddingAmount, paddingAmount, paddingAmount, paddingAmount)
-
-        //apply the layoutParams to the CardView
-        shoeCard.layoutParams = layoutParams
-
         return shoeCard
     }
 
     //create and return the LinearLayout that goes inside a shoe item's CardView in the list
     private fun createLinearLayoutForShoeCard(): LinearLayout {
-        val layoutParams = MarginLayoutParams(
-            MATCH_PARENT,
-            WRAP_CONTENT,
+        val layoutParams = ViewGroup.LayoutParams(
+            ViewGroup.LayoutParams.MATCH_PARENT,
+            ViewGroup.LayoutParams.WRAP_CONTENT,
         )
         val shoeCardLinearLayout = LinearLayout(requireContext())
         shoeCardLinearLayout.orientation = LinearLayout.VERTICAL

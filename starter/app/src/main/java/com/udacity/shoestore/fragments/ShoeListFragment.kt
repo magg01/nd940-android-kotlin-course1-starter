@@ -10,7 +10,9 @@ import android.view.ViewGroup.MarginLayoutParams
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.cardview.widget.CardView
+import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.content.ContextCompat
+import androidx.core.view.children
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -19,6 +21,7 @@ import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
 import com.udacity.shoestore.models.Shoe
 import com.udacity.shoestore.models.ShoeViewModel
+import timber.log.Timber
 
 
 class ShoeListFragment : Fragment() {
@@ -65,13 +68,12 @@ class ShoeListFragment : Fragment() {
         for (shoe in shoeList) {
             //create card view
             val shoeCard = createShoeCardView()
-            //create linear layout for inside shoeCard
             val linearLayout = createLinearLayoutForShoeCard()
             //add the necessary text views to the linear layout
             buildTextViewsInLinearLayout(linearLayout, shoe)
             //add the LinearLayout to the CardView
             shoeCard.addView(linearLayout)
-            //add the CardView to the LinearLayout CardView container in the binding.
+            //add the CardView to the CardView container in the binding.
             binding.shoeListHolder.addView(shoeCard)
         }
     }
@@ -103,12 +105,13 @@ class ShoeListFragment : Fragment() {
 
     //create and return a single empty card view set up for displaying one shoe item on the list
     private fun createShoeCardView(): CardView {
-        val layoutParams = MarginLayoutParams(
+        val layoutParams = LinearLayout.LayoutParams(
             MATCH_PARENT,
             WRAP_CONTENT,
         )
         //create a CardView
         val shoeCard = CardView(requireContext())
+        shoeCard.id = View.generateViewId()
 
         //set the margins of the CardView
         val margin = convertDpToPixels(8).toInt()

@@ -14,6 +14,12 @@
             type="com.udacity.shoestore.models.ShoeViewModel" />
     </data>
 
+    <!-- Constraint layout used to arrange labels and fields side by side with their baselines
+     constrained to each other so the text appears on the same level. EditText views are constrained
+     in a packed vertical chain with 16dp margin with the top of the chain constrained to the top
+      of the layout and the bottom of the chain constrained to the bottom of the layout so the
+      block of editText views are always centered in the display. Buttons are constrained to the
+      bottom and sides of the bottom EditText view to keep the layout neat. -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">

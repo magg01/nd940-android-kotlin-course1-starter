@@ -20,8 +20,7 @@
             android:ems="10"
             android:inputType="textEmailAddress"
             app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_chainStyle="packed" />
 
@@ -34,11 +33,13 @@
             android:inputType="textPassword"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/passwordLabelTextView"
             app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
 
-        <Button style="@style/Widget.AppCompat.Button.Colored"
+        <Button
             android:id="@+id/registerButton"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -46,8 +47,9 @@
             app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
             app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
 
-        <Button style="@style/Widget.AppCompat.Button.Colored"
+        <Button
             android:id="@+id/loginButton"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -55,25 +57,31 @@
             app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
             app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
 
-        <TextView style="@style/TextAppearance.AppCompat.Body1"
+        <TextView
             android:id="@+id/emailLabelTextView"
+            style="@style/TextAppearance.AppCompat.Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="16dp"
             android:labelFor="@id/editTextTextEmailAddress"
             android:text="@string/label_email_field"
             app:layout_constraintBaseline_toBaselineOf="@+id/editTextTextEmailAddress"
-            app:layout_constraintEnd_toStartOf="@+id/editTextTextEmailAddress" />
+            app:layout_constraintEnd_toStartOf="@+id/editTextTextEmailAddress"
+            app:layout_constraintHorizontal_chainStyle="packed" />
 
-        <TextView style="@style/TextAppearance.AppCompat.Body1"
+        <TextView
             android:id="@+id/passwordLabelTextView"
+            style="@style/TextAppearance.AppCompat.Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="16dp"
             android:labelFor="@id/editTextTextPassword"
             android:text="@string/label_password_field"
             app:layout_constraintBaseline_toBaselineOf="@+id/editTextTextPassword"
-            app:layout_constraintEnd_toStartOf="@+id/editTextTextPassword" />
+            app:layout_constraintEnd_toStartOf="@+id/editTextTextPassword"
+            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

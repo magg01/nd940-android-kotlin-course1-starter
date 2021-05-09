@@ -1,27 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!-- constraint layout used to contain the scrollview for the shoe list which is constrained
+     to the top of the layout with a marginTop of the size of the action bar so it doesn't get
+     masked by the action bar. By utilising a constraint layout the Floating action button can
+      remain in the bottom-right of the constraint layout even when the scrollview is scrolled. -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <!-- ScrollView necessary here to be able to scroll the list of shoes once they go off the
+         bottom of the display -->
         <ScrollView
             android:id="@+id/shoe_list_scroll_view"
             android:layout_height="match_parent"
             android:layout_width="match_parent"
             android:layout_marginTop="?attr/actionBarSize">
 
-            <androidx.appcompat.widget.LinearLayoutCompat
+            <!-- ScrollView can only contain one child element so in order to contain a list of
+            shoes a linear layout with vertical orientation is needed here to act as the container
+            for shoe CardViews which are created programatically. -->
+            <LinearLayout
                 android:id="@+id/shoe_list_holder"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-
-            </androidx.appcompat.widget.LinearLayoutCompat>
+            </LinearLayout>
         </ScrollView>
 
+        <!-- floating action button is contained within the top level constraint layout so that
+        it remains in the same position on the display when the scroll view is scrolled. -->
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab"
             android:layout_width="wrap_content"
@@ -30,8 +39,6 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
             android:contentDescription="@string/fab_content_description"
-            android:paddingTop="16dp"
-            android:paddingBottom="16dp"
             android:src="@drawable/ic_add"
             app:layout_constraintBottom_toBottomOf="@+id/shoe_list_scroll_view"
             app:layout_constraintEnd_toEndOf="parent" />

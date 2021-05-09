@@ -62,6 +62,7 @@ class ShoeListFragment : Fragment() {
         for (shoe in shoeList) {
             //create card view
             val shoeCard = createShoeCardView()
+            //create a LinearLayout for the contents of the CardView
             val linearLayout = createLinearLayoutForShoeCard()
             //add the necessary text views to the linear layout
             buildTextViewsInLinearLayout(linearLayout, shoe)
@@ -99,10 +100,6 @@ class ShoeListFragment : Fragment() {
 
     //create and return a single empty card view set up for displaying one shoe item on the list
     private fun createShoeCardView(): CardView {
-        val layoutParams = LinearLayout.LayoutParams(
-            LinearLayout.LayoutParams.MATCH_PARENT,
-            LinearLayout.LayoutParams.WRAP_CONTENT
-        )
         //create a CardView
         val shoeCard = CardView(requireContext())
         //set the padding for the card
